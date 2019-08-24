@@ -1,3 +1,6 @@
-com:
-   name: 我能被钩子触发
-   age: 88
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8080/eureka
+    fetch-registry: true
+    register-with-eureka: true
