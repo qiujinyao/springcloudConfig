@@ -21,4 +21,4 @@ fdfs:
     height: 100
   tracker-list: 49.232.40.240:22122
 images:
-  path: http://49.232.40.240/
+  path: "http://49.232.40.240/"
