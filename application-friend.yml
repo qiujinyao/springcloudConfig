@@ -1,0 +1,28 @@
+server:
+  port: 9092
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8080/eureka
+    fetch-registry: true
+    register-with-eureka: true
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/tencentbb?useUnicode=true&characterEncoding=utf-8&serverTimezone=UTC
+    username: root
+    password: U4xk8cTV79TwJgXjH8ByOb40lwRirQnzxPStNu2JmGtr2W+a6XZSf4iyDOGa6+2U5TwL/I0HVAUto7Dm+5gFfQ==
+    driver-class-name: com.mysql.jdbc.Driver
+    druid:
+      initial-size: 10
+      max-active: 100
+      min-idle: 10
+      filter:
+        config:
+          enabled: true
+      connection-properties: config.decrypt=true;config.decrypt.key=${public-key}
+  application:
+    name: eureka-friend
+public-key: MFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAJshB3I/srlPFIeEBtxu8S4cLBsopGA0OX7T7edAd0H9fXWZzeTe/84HBi9HebRuHGkzEm8/DxqBWTlea0CUn7UCAwEAAQ==
+
+mybatis-plus:
+  mapper-locations: classpath:mapper/*Mapper.xml
