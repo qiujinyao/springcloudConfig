@@ -1,5 +1,8 @@
 #暴露接口
 #设置fastfds服务地址
+#配置独有的信息
+server:
+  port: 9091
 fdfs:
   so-timeout: 60000
   connect-timeout: 60000
@@ -12,8 +15,3 @@ fdfs:
   tracker-list: 49.232.40.240:22122
  images:
   path: http://49.232.40.240/
-management:
-  endpoints:
-    web:
-      exposure:
-        include: ['*']
