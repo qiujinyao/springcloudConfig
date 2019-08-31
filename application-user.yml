@@ -1,0 +1,19 @@
+#暴露接口
+#设置fastfds服务地址
+fdfs:
+  so-timeout: 60000
+  connect-timeout: 60000
+  pool:
+    jmx-enabled: false
+  #设置缩略图的大小
+  thumb-image:
+    width: 100
+    height: 100
+  tracker-list: 49.232.40.240:22122
+ images:
+  path: http://49.232.40.240/
+management:
+  endpoints:
+    web:
+      exposure:
+        include: ['*']
